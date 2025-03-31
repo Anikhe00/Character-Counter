@@ -221,7 +221,6 @@ body {
   align-items: center;
   gap: var(--spacing-075);
   align-self: stretch;
-  display: none;
 }
 
 .error-message p {
@@ -496,7 +495,7 @@ label {
 }
 
 .progress-percentage {
-  width: 5.4375rem;
+  width: 6.25rem;
   text-align: right;
   font-size: var(--text-preset-4);
   font-weight: var(--regular);
