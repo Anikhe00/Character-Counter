@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <link rel="icon" type="image/svg+xml" href="/Assets/Logo/Logo mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+  <main class="container-wrapper">
+    <div class="container">
+  
+      <div class="nav-bar">
+        <div class="logo-container">
+          <img id="logo" src="Assets/Logo/Logo White.svg" alt="Logo">
+        </div>
+  
+        <div class="theme-switch" id="theme-switcher">
+          <svg class="icon" id="light-switch" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Settings Icon" clip-path="url(#clip0_216_993)">
+            <path id="Icon" d="M11.0007 1.83334V3.66667M11.0007 18.3333V20.1667M3.66732 11H1.83398M5.78859 5.78794L4.49223 4.49158M16.2127 5.78794L17.5091 4.49158M5.78859 16.2158L4.49223 17.5122M16.2127 16.2158L17.5091 17.5122M20.1673 11H18.334M15.584 11C15.584 13.5313 13.532 15.5833 11.0007 15.5833C8.46935 15.5833 6.41732 13.5313 6.41732 11C6.41732 8.4687 8.46935 6.41667 11.0007 6.41667C13.532 6.41667 15.584 8.4687 15.584 11Z" stroke="white" stroke-width="1.98" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_216_993">
+            <rect width="22" height="22" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+  
+          <svg class="icon inactive" id="dark-switch" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="moon-02" clip-path="url(#clip0_216_996)">
+              <path id="Icon" d="M20.1259 11.8769C18.8638 14.0909 16.4815 15.5836 13.7507 15.5836C9.70056 15.5836 6.41732 12.3004 6.41732 8.25031C6.41732 5.51922 7.91027 3.13683 10.1246 1.87474C5.47292 2.31579 1.83398 6.23298 1.83398 11.0001C1.83398 16.0627 5.93804 20.1668 11.0007 20.1668C15.7675 20.1668 19.6845 16.5282 20.1259 11.8769Z" stroke="#12131A" stroke-width="1.98" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_216_996">
+              <rect width="22" height="22" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+        </div>
+      </div>
+  
+      <div class="header-container">
+        <h1 class="title">Analyze your text in real-time.</h1>
+      </div>
+  
+      <div class="main-container">
+        <div class="textarea-container">
+          <textarea class="text-area" id="textarea" placeholder="Start typing here… (or paste your text)"></textarea>
+  
+          <div class="error-message">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="info-circle">
+              <path id="info-circle_2" d="M11.7812 5.875C8.5 5.875 5.875 8.52734 5.875 11.7812C5.875 15.0625 8.5 17.6875 11.7812 17.6875C15.0352 17.6875 17.6875 15.0625 17.6875 11.7812C17.6875 8.52734 15.0078 5.875 11.7812 5.875ZM11.7812 5C15.5 5 18.5625 8.0625 18.5625 11.7812C18.5625 15.5273 15.5 18.5625 11.7812 18.5625C8.03516 18.5625 5 15.5273 5 11.7812C5 8.0625 8.03516 5 11.7812 5ZM10.7969 14.4062H11.125V11.125H10.7969C10.6055 11.125 10.4688 10.9883 10.4688 10.7969V10.5781C10.4688 10.4141 10.6055 10.25 10.7969 10.25H12.1094C12.2734 10.25 12.4375 10.4141 12.4375 10.5781V14.4062H12.7656C12.9297 14.4062 13.0938 14.5703 13.0938 14.7344V14.9531C13.0938 15.1445 12.9297 15.2812 12.7656 15.2812H10.7969C10.6055 15.2812 10.4688 15.1445 10.4688 14.9531V14.7344C10.4688 14.5703 10.6055 14.4062 10.7969 14.4062ZM11.7812 7.84375C12.2461 7.84375 12.6562 8.25391 12.6562 8.71875C12.6562 9.21094 12.2461 9.59375 11.7812 9.59375C11.2891 9.59375 10.9062 9.21094 10.9062 8.71875C10.9062 8.25391 11.2891 7.84375 11.7812 7.84375Z" fill="#FA9A82"/>
+              </g>
+              </svg>
+              <p>Limit reached! Your text exceeds 300 characters.</p>            
+          </div>
+        </div>
+        
+        <div class="options-container">
+          <div class="options">
+            <div class="option exclude-spaces">
+              <input class="checkbox" type="checkbox" id="exclude">
+              <label for="exclude">Exclude Spaces</label>
+            </div>
+  
+            <div class="option character-limit">
+              <input class="checkbox" type="checkbox" id="character">
+              <label for="character">Set Character Limit</label>
+              <input class="character-limit-input" type="text" name="" id="">
+            </div>
+          </div>
+  
+          <div class="reading-time">
+            <p>Approx. reading time: <span id="reading-time">0 minute</span></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="stats-and-density-container">
+        <div class="stats-container">
+          <div class="stat character">
+            <img class="shape" src="/Assets/Shapes/Shape-01.svg">
+  
+            <h1 class="stat-value" id="character-value">00</h1>
+            <p class="stat-title">Total Characters</p>
+          </div>
+  
+          <div class="stat word">
+            <img class="shape" src="/Assets/Shapes/Shape-02.svg">
+  
+            <h1 class="stat-value" id="word-value">00</h1>
+            <p class="stat-title">Word Count</p>
+          </div>
+  
+          <div class="stat sentence">
+            <img class="shape" src="/Assets/Shapes/Shape-03.svg">
+  
+            <h1 class="stat-value" id="sentence-value">00</h1>
+            <p class="stat-title">Sentence Count</p>
+          </div>
+        </div>
+  
+        <div class="density-container">
+          <h3 class="density-title">Letter Density</h3>
+  
+          <p class="no-characters">No characters found. Start typing to see letter density.</p>
+
+          <div class="density-list inactive">
+            <div class="letter-density">
+              <p class="letter-label">E</p>
+              <div class="progress-bar">
+                <div class="progress-bar-bg"></div>
+                <div class="progress-bar-fill"></div>
+              </div>
+              <p class="progress-percentage">40(16.06%)</p>
+            </div>
+          </div>
+
+          <button class="see-more inactive" id="seeMore">
+            See more
+            <svg class="arrow-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.25 0.65625L10.875 5.21875C11.0312 5.375 11.0312 5.625 10.875 5.75L10.25 6.375C10.125 6.53125 9.875 6.53125 9.71875 6.375L6 2.6875L2.25 6.375C2.09375 6.53125 1.875 6.53125 1.71875 6.375L1.09375 5.75C0.9375 5.625 0.9375 5.375 1.09375 5.21875L5.71875 0.65625C5.875 0.5 6.09375 0.5 6.25 0.65625Z" fill="currentColor"/>
+              </svg>              
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
