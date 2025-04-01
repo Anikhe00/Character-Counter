@@ -407,6 +407,7 @@ label {
   line-height: var(--preset-1-lh);
   letter-spacing: var(--preset-1-2-ls);
   color: #12131A !important;
+  z-index: 2;
 }
 
 .stat-title {
@@ -415,6 +416,7 @@ label {
   line-height: var(--preset-3-lh);
   letter-spacing: var(--preset-3-4-ls);
   color: #12131A !important;
+  z-index: 2;
 }
 
 .density-container {
@@ -523,4 +525,193 @@ label {
 
 .arrow-icon {
   color: var(--neutral-200) !important; 
+}
+
+/* Tablet View */
+@media screen and (max-width: 71rem) {
+  .container-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--spacing-200) 0;
+    width: 100%;
+    height: 100dvh;
+    overflow: scroll;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-500);
+    padding: 0 var(--spacing-400);
+    align-items: center;
+    justify-content: start;
+  }
+
+  .title {
+    width: 70%;
+    color: var(--neutral-100);
+    font-size: var(--text-preset-1);
+    font-weight: var(--bold);
+    line-height: var(--preset-1-lh);
+    letter-spacing: var(--preset-1-2-ls);
+    text-align: center;
+  }
+
+  .shape {
+    width: 9.375rem;
+    height: 9.375rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -4rem;
+    top: 0;
+    z-index: 1;
+  }
+
+  .progress-percentage {
+    width: 7rem;
+    text-align: right;
+    font-size: var(--text-preset-4);
+    font-weight: var(--regular);
+    line-height: var(--preset-4-lh);
+    letter-spacing: var(--preset-4-ls);
+    color: var(--neutral-200);
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 42.5rem) {
+  .container-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--spacing-200) 0;
+    width: 100%;
+    height: 100dvh;
+    overflow: scroll;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-500);
+    padding: 0 var(--spacing-200);
+    align-items: center;
+    justify-content: start;
+  }
+
+  .title {
+    width: 100%;
+    color: var(--neutral-100);
+    font-size: var(--text-preset-1-mobile);
+    font-weight: var(--bold);
+    line-height: var(--preset-1-lh);
+    letter-spacing: var(--preset-1-2-ls);
+    text-align: center;
+  }
+
+  .text-area {
+    display: flex;
+    width: 100%;
+    height: 12.5rem;
+    padding: var(--spacing-200);
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: var(--radius-12);
+    border: 2px solid var(--neutral-700);
+    background: var(--neutral-800);
+    resize: none;
+    color: var(--neutral-200);
+    font-size: var(--text-preset-3);
+    font-weight: var(--regular);
+    line-height: var(--preset-3-lh);
+    letter-spacing: var(--preset-3-4-ls);
+  }
+
+  .options-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: var(--spacing-150);
+  }
+  
+  .options {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: var(--spacing-150);
+  }
+
+  .stats-and-density-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: var(--spacing-300);
+  }
+  
+  .stats-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-150);
+  }
+  
+  .stat {
+    width: 100%;
+    height: 8.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--spacing-250);
+    row-gap: var(--spacing-100);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-12);
+  }
+
+  .shape {
+    width: 9.375rem;
+    height: 9.375rem;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -2rem;
+    top: 0;
+    z-index: 1;
+  }
+
+  .stat-value {
+    font-size: var(--text-preset-1-mobile);
+    font-weight: var(--bold);
+    line-height: var(--preset-1-lh);
+    letter-spacing: var(--preset-1-2-ls);
+    color: #12131A !important;
+    z-index: 2;
+  }
+
+  .progress-percentage {
+    width: 8.25rem;
+    text-align: right;
+    font-size: var(--text-preset-4);
+    font-weight: var(--regular);
+    line-height: var(--preset-4-lh);
+    letter-spacing: var(--preset-4-ls);
+    color: var(--neutral-200);
+  }
 }
