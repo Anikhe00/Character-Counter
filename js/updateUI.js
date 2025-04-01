@@ -34,7 +34,7 @@ function updateUI(text, wordValue, characterValue, sentenceValue, readingTime, e
   readingTime.textContent = formattedTime
   noCharactersMessage.classList.add('inactive')
   densityList.classList.remove('inactive')
-  updateLetterDensity(text, densityList)
+  updateLetterDensity(text)
 }
 
 export {updateUI}

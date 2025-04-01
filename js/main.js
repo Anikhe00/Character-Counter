@@ -1,6 +1,7 @@
 import { toggleTheme } from "./theme.js";
 import { updateUI } from "./updateUI.js";
 import { characterLimit } from "./characterLimit.js";
+import { updateLetterDensity } from "./displayDensity.js";
 
 const themeSwitcher = document.getElementById('theme-switcher');
 const textArea = document.getElementById('textarea')
@@ -41,12 +42,19 @@ characterLimitCheckbox.addEventListener("change", function() {
   if (characterLimitCheckbox.checked) {
     characterLimitInput.value = '300'
   }
-  characterLimit(textArea, characterLimitCheckbox, characterLimitInput, errorElement, errorMessage)
+  characterLimit(textArea, characterLimitCheckbox, characterLimitInput, errorElement, errorMessage);
+  // Update UI to refresh letter density
+  const text = textArea.value;
+  const excludeSpaces = excludeSpacesCheckbox.checked;
+  updateUI(text, wordValue, characterValue, sentenceValue, readingTime, excludeSpaces);
 })
 
 characterLimitInput.addEventListener("input", function() {
   if (characterLimitCheckbox.checked) {
-    characterLimit(textArea, characterLimitCheckbox, characterLimitInput, errorElement, errorMessage)
+    characterLimit(textArea, characterLimitCheckbox, characterLimitInput, errorElement, errorMessage);
+    // Update UI to refresh letter density
+    const text = textArea.value;
+    const excludeSpaces = excludeSpacesCheckbox.checked;
+    updateUI(text, wordValue, characterValue, sentenceValue, readingTime, excludeSpaces);
   }
 })
-

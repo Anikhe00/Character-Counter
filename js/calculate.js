@@ -50,11 +50,7 @@ function calculateLetterDensity(text) {
     for (let i = 0; i < text.length; i++) {
       let char = text[i].toLowerCase();
       if (char >= 'a' && char <= 'z') {
-        if (!letterCount[char]) {
-          letterCount[char] = 1
-        } else {
-          letterCount[char]++
-        }
+        letterCount[char] = (letterCount[char] || 0) + 1;
       }
     }
   
