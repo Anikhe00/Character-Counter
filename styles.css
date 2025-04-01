@@ -522,5 +522,5 @@ label {
 }
 
 .arrow-icon {
-  color: var(--neutral-200);
+  color: var(--neutral-200) !important; 
 }
