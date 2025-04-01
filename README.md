@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Assets/screencapture-character-counter-rose-vercel-app-2025-04-01-11_56_24.png)
+![(./Assets/screencapture-character-counter-rose-vercel-app-2025-04-01-11_56_24.png)]
 
 ### Links
 
